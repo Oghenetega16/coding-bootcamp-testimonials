@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+    --dark-blue: hsl(240, 38%, 20%);
+    --grayish-blue: hsl(240, 18%, 77%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+    font-family: "Inter", serif;
+    font-size: clamp(17.7px, 90%, 2rem);
+    background-image: url(./images/pattern-bg.svg), url(./images/pattern-quotes.svg), url(./images/pattern-curve.svg);
+    background-size: 21.5rem, 3.8rem, 17rem;
+    background-position: 10px 20px, center 60%, 0 100%;
+    background-repeat: no-repeat;
+}
+
+img {
+    width: 79%;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+p {
+    margin: 4rem 1rem 1.3rem 1rem;
+    color: var(--dark-blue);
+    font-weight: 500;
+}
+
+h4 {
+    /* font-weight: 700; */
+    color: var(--dark-blue);
+}
+
+small {
+    font-weight: 500;
+    color: var(--grayish-blue);
+}
+
+main {
+    width: clamp(290px, 90%, 31rem);
+    text-align: center;
+    margin: 50px auto 80px auto;
+}
+
+#buttons {
+    width: 85px;
+    background-color: #fff;
+    margin: auto;
+    padding: 0.6rem 0.8rem;
+    border-radius: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    margin-top: -25px;
+}
+
+svg {
+    stroke: var(--grayish-blue);
+    fill: var(--dark-blue);
+}
+
+.hide {
+    display: none;
+}
+
+@media (min-width: 600px) {
+    main {
+        width: clamp(600px, 90%, 90rem);
+        text-align: left;
+    }
+
+    p {
+        margin-left: 0;
+    }
+    
+    .slide {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+    }
+
+    #text {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #initials {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .hide {
+        display: none;
+    }
+}
